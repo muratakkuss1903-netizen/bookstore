@@ -1,4 +1,8 @@
-import { initialBooks, initialCategories } from "./initialData.js";
+import {
+  initialBooks,
+  initialCategories,
+  initialUsers,
+} from "./initialData.js";
 
 export class Storage {
   static getCategories() {
@@ -22,5 +26,19 @@ export class Storage {
     const books = this.getBooks();
     const updatedBooks = books.filter((book) => book.id !== Number(bookId));
     localStorage.setItem("books", JSON.stringify(updatedBooks));
+  }
+  static getUsers() {
+    const users = localStorage.getItem("users");
+    if (!users) {
+      localStorage.setItem("users", JSON.stringify(initialUsers));
+      return initialUsers;
+    }
+    return JSON.parse(users);
+  }
+  static registerUser(newUser) {
+    const users = this.getUsers();
+
+    users.push(newUser);
+    localStorage.setItem("users", JSON.stringify(users));
   }
 }

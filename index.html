@@ -23,7 +23,28 @@
       >
     </div>
     <div
-      id="container"
+      class="container-fluid bg-dark text-light d-flex justify-content-start py-3"
+    >
+      <a href="member.html" class="text-decoration-none text-light"
+        ><h4>Üyelik</h4></a
+      >
+    </div>
+    <div>
+      <h4>Üye Giriş</h4>
+      <form id="loginForm">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Şifre</label>
+          <input type="password" class="form-control" id="password" />
+        </div>
+        <button id="loginBtn" class="btn btn-primary">Giriş Yap</button>
+      </form>
+    </div>
+    <div
+      id="container1"
       class="container bg-light d-flex flex-wrap justify-content-center gap-3 py-5 width-100"
     >
       <!-- <div class="card" style="width: 18rem">

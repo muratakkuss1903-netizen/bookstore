@@ -118,3 +118,12 @@ export const initialBooks = [
       "Vadideki Zambak, Honore de Balzac tarafından yazılmış bir romandır. Roman, bir bireyin ahlaki ve dini gelişimini konu alır.",
   },
 ];
+
+export const initialUsers = [
+  {
+    username: "admin",
+    email: "admin@example.com",
+    password: "admin123",
+    confirmPassword: "admin123",
+  },
+];
